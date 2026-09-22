@@ -1,0 +1,262 @@
+/* ==========================================================================
+   1. Theme Variables & Base Setup
+   ========================================================================== */
+:root {
+    /* Main colors */
+    --color-primary: #8C4A32;    /* Warm terracotta brown */
+    --color-secondary: #D99B52;  /* Honey gold accent */
+    --color-dark: #2C2523;       /* Dark espresso for easy-to-read text */
+    --color-light: #FDFBF7;      /* Soft cream background */
+    --color-white: #FFFFFF;
+
+    /* Fonts */
+    --font-heading: 'Georgia', serif;
+    --font-body: 'Arial', sans-serif;
+}
+
+/* Quick reset to keep spacing predictable */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+}
+
+/* ==========================================================================
+   2. Text & Reusable Bits
+   ========================================================================== */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 0.25rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+img, picture, audio {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   3. Phone-First Layout (Default)
+   ========================================================================== */
+header {
+    background-color: var(--color-white);
+    padding: 1.5rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+header img {
+    max-height: 80px;
+    margin: 0 auto 1rem auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Stack menu items on small screens */
+    gap: 0.75rem;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a:focus {
+    color: var(--color-primary);
+}
+
+main {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Content cards */
+figure {
+    margin: 1.5rem 0;
+    background: var(--color-white);
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+figcaption {
+    font-family: var(--font-heading);
+    font-style: italic;
+    text-align: center;
+    color: var(--color-primary);
+    margin-top: 0.5rem;
+}
+
+/* Form layout */
+form {
+    background-color: var(--color-white);
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 1.5rem;
+}
+
+fieldset {
+    border: 1px solid var(--color-secondary);
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    color: var(--color-primary);
+    padding: 0 0.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid var(--color-primary);
+    border-color: transparent;
+}
+
+button[type="submit"] {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisanal Bakery & Cafe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="[https://via.placeholder.com/150x80?text=Bakery+Logo](https://via.placeholder.com/150x80?text=Bakery+Logo)" alt="Artisanal Bakery Logo">
+        <nav>
+            <ul>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#menu">Daily Special</a></li>
+                <li><a href="#order">Place an Order</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>Handcrafted Sourdough & Pastries</h1>
+            <p>Welcome to our neighborhood bakery, where tradition meets quality ingredients. We bake every loaf fresh daily using long fermentation techniques and organic flour.</p>
+        </section>
+
+        <section id="menu">
+            <h2>Today's Featured Bakes</h2>
+            <figure>
+                <img src="[https://via.placeholder.com/600x400?text=Fresh+Sourdough+Bread](https://via.placeholder.com/600x400?text=Fresh+Sourdough+Bread)" alt="Freshly baked artisanal sourdough bread crust">
+                <figcaption>Classic Country Sourdough — Naturally Leavened</figcaption>
+            </figure>
+            
+            <p>Listen to the crunch of our signature crust:</p>
+            <audio controls>
+                <source src="audio-sample.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section id="order">
+            <h2>Pre-Order Fresh Bread</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Jane Doe">
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="jane@example.com">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Order Details</legend>
+
+                    <label for="item">Select Bread</label>
+                    <select id="item" name="item" required>
+                        <option value="">-- Choose an Option --</option>
+                        <option value="sourdough">Country Sourdough</option>
+                        <option value="baguette">French Baguette</option>
+                        <option value="ciabatta">Olive Ciabatta</option>
+                    </select>
+
+                    <label for="pickup-date">Pickup Date</label>
+                    <input type="date" id="pickup-date" name="pickup-date" required>
+
+                    <label for="notes">Special Instructions</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Slicing preferences, dietary notes, etc."></textarea>
+                </fieldset>
+
+                <button type="submit">Submit Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Artisanal Bakery. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
